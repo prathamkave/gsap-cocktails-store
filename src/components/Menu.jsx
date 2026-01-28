@@ -26,8 +26,6 @@ useGSAP(() => {
     }
     
     const currentCocktail = getCocktailAt(0);
-    const prevCocktail = getCocktailAt(-1);
-    const nextCocktail = getCocktailAt(1);
 
 return (
     <section id='menu' aria-labelledby='menu-heading'>
@@ -56,12 +54,10 @@ return (
         <div className="content">
             <div className="arrows">
                 <button className='text-left' onClick={() => goToSlide(currentIndex - 1)}>
-                    <span>{prevCocktail.name}</span>
                     <img src="/images/right-arrow.png" alt="right-arrow" aria-hidden='true'/>
                 </button>
 
                 <button className='text-right' onClick={() => goToSlide(currentIndex + 1)}>
-                    <span>{nextCocktail.name}</span>
                     <img src="/images/left-arrow.png" alt="left-arrow" aria-hidden='true'/>
                 </button>
             </div>
